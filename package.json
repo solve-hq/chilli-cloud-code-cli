@@ -1,0 +1,54 @@
+{
+  "name": "chilli-cloud-code-cli",
+  "description": "CLI to interact with Chilli Cloud Code",
+  "version": "0.0.1",
+  "author": "Eric Allam",
+  "bin": {
+    "chilli-cloud-code": "./bin/run"
+  },
+  "bugs": "https://github.com/solve-hq/chilli-cloud-code-cli/issues",
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^3",
+    "axios": "^0.19.2",
+    "axios-debug-log": "^0.7.0",
+    "cli-ux": "^5.4.5",
+    "debug": "^4.1.1",
+    "inquirer": "^7.1.0",
+    "lodash.isequal": "^4.5.0"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1",
+    "globby": "^10"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/src"
+  ],
+  "homepage": "https://github.com/solve-hq/chilli-cloud-code-cli",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "chilli-cloud-code",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "solve-hq/chilli-cloud-code-cli",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}

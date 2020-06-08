@@ -1,0 +1,19 @@
+{
+  "scripts": {
+    "API_SCRIPT": {
+      "code": "./scripts/apiScript.js",
+      "name": "Demo API Script",
+      "type": "API",
+      "parameters": {
+        "FooBar": {
+          "type": "string",
+          "required": true
+        },
+        "FooBaz": {
+          "type": "string",
+          "required": true
+        }
+      }
+    }
+  }
+}
