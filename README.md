@@ -21,7 +21,7 @@ $ npm install -g chilli-cloud-code-cli
 $ chilli-cloud-code COMMAND
 running command...
 $ chilli-cloud-code (-v|--version|version)
-chilli-cloud-code-cli/0.1.1 darwin-x64 node-v13.11.0
+chilli-cloud-code-cli/0.1.2 darwin-x64 node-v13.11.0
 $ chilli-cloud-code --help [COMMAND]
 USAGE
   $ chilli-cloud-code COMMAND
@@ -51,7 +51,7 @@ OPTIONS
   -g, --game=game  (required) The Chilli Game token to specify which game to deploy to
 ```
 
-_See code: [src/commands/deploy-manifest.js](https://github.com/solve-hq/chilli-cloud-code-cli/blob/v0.1.1/src/commands/deploy-manifest.js)_
+_See code: [src/commands/deploy-manifest.js](https://github.com/solve-hq/chilli-cloud-code-cli/blob/v0.1.2/src/commands/deploy-manifest.js)_
 
 ## `chilli-cloud-code help [COMMAND]`
 
@@ -85,5 +85,5 @@ OPTIONS
   -p, --player=player      Chilli Connect ID of the player to run the script as
 ```
 
-_See code: [src/commands/run.js](https://github.com/solve-hq/chilli-cloud-code-cli/blob/v0.1.1/src/commands/run.js)_
+_See code: [src/commands/run.js](https://github.com/solve-hq/chilli-cloud-code-cli/blob/v0.1.2/src/commands/run.js)_
 <!-- commandsstop -->
