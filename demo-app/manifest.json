@@ -14,6 +14,12 @@
           "required": true
         }
       }
+    },
+    "MODULE_SCRIPT": {
+      "code": "./scripts/moduleScript.js",
+      "name": "Demo Module Script",
+      "type": "MODULE",
+      "language": "JS"
     }
   }
 }

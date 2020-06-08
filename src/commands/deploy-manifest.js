@@ -19,8 +19,12 @@ const hasLocalChanges = (remoteScript, scriptOperation) => {
   return !isEqual(remoteScript.Params, normalizedLocalParams);
 };
 
-const normalizeScriptParams = (params) =>
-  Object.keys(params).map((paramName) => {
+const normalizeScriptParams = (params) => {
+  if (typeof params === "undefined") {
+    return params;
+  }
+
+  return Object.keys(params).map((paramName) => {
     const param = params[paramName];
 
     return {
@@ -29,6 +33,7 @@ const normalizeScriptParams = (params) =>
       Required: param.required,
     };
   });
+};
 
 const createOptions = (key, scriptDefinition, code) => {
   return { Key: key, ...updateOptions(scriptDefinition, code) };
