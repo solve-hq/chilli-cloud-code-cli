@@ -167,7 +167,9 @@ class DeployManifestCommand extends Command {
     const manifest = JSON.parse(manifestContents);
 
     const scriptOperations = await Object.keys(manifest.scripts).reduce(
-      async (agg, scriptKey) => {
+      async (aggPromise, scriptKey) => {
+        const agg = await aggPromise;
+
         const scriptDefinition = manifest.scripts[scriptKey];
 
         const scriptPath = path.resolve(
@@ -212,7 +214,7 @@ class DeployManifestCommand extends Command {
 
         return agg.concat(scriptOperationDetails);
       },
-      []
+      Promise.resolve([])
     );
 
     cli.action.start(`Deploying changes to scripts`);
