@@ -1,7 +1,7 @@
 {
   "name": "chilli-cloud-code-cli",
   "description": "CLI to interact with Chilli Cloud Code",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": "Eric Allam",
   "bin": {
     "chilli-cloud-code": "./bin/run"
